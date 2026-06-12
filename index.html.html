@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Bienvenue en Chartreuse</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="app">
+    <section class="main-screen" aria-label="Accueil">
+      <div class="fixed-bg" aria-hidden="true"></div>
+      <div class="scroll-gradient" aria-hidden="true"></div>
+
+      <header class="top-meta" id="topMeta" aria-label="Informations de lieu">
+        <span>Col du Coq</span>
+        <span>Dent de Crolles · 2062 m</span>
+      </header>
+
+      <div class="content">
+        <header class="intro">
+          <h1 id="welcomeText">Bienvenue<br>en Chartreuse</h1>
+        </header>
+
+        <section class="panel-zone" aria-label="Panneau et langues">
+          <div class="panel-cluster">
+            <div class="panel-tools">
+              <button class="zoom-button" id="openZoomIcon" type="button" aria-label="Agrandir le panneau">
+                <svg viewBox="0 0 48 48" aria-hidden="true">
+                  <circle cx="21" cy="21" r="11"></circle>
+                  <path d="M30 30L39 39"></path>
+                </svg>
+              </button>
+            </div>
+
+            <div class="panel-wrap">
+              <button class="panel-card" id="openZoom" type="button" aria-label="Agrandir le panneau">
+                <img id="panelImage" src="panels/panel-fr.png" alt="Panneau de randonnée Dent de Crolles en français">
+              </button>
+            </div>
+
+            <nav class="language-dock" aria-label="Sélection de la langue">
+            <button class="flag-button active" type="button" data-lang="fr" aria-label="Français">
+              <img src="assets/flag-fr.png" alt="Français">
+            </button>
+            <button class="flag-button" type="button" data-lang="en" aria-label="English">
+              <img src="assets/flag-en.png" alt="English">
+            </button>
+            <button class="flag-button" type="button" data-lang="es" aria-label="Español">
+              <img src="assets/flag-es.png" alt="Español">
+            </button>
+            <button class="flag-button" type="button" data-lang="ja" aria-label="日本語">
+              <img src="assets/flag-ja.png" alt="日本語">
+            </button>
+            <button class="flag-button" type="button" data-lang="ko" aria-label="한국어">
+              <img src="assets/flag-ko.png" alt="한국어">
+            </button>
+            <button class="flag-button" type="button" data-lang="ar" aria-label="العربية">
+              <img src="assets/flag-ar.png" alt="العربية">
+            </button>
+            <button class="flag-button" type="button" data-lang="de" aria-label="Deutsch">
+              <img src="assets/flag-de.png" alt="Deutsch">
+            </button>
+            <button class="flag-button" type="button" data-lang="it" aria-label="Italiano">
+              <img src="assets/flag-it.png" alt="Italiano">
+            </button>
+            <button class="flag-button" type="button" data-lang="pt" aria-label="Português">
+              <img src="assets/flag-pt.png" alt="Português">
+            </button>
+            </nav>
+          </div>
+
+          <p class="copyright"><span aria-hidden="true">®</span> Réserve naturelle de Haute Chartreuse 2026</p>
+        </section>
+      </div>
+
+      <button class="scroll-cue" id="scrollCue" type="button" aria-label="Faire défiler vers le panneau">
+        <svg viewBox="0 0 48 48" aria-hidden="true">
+          <path d="M14 20L24 30L34 20"></path>
+        </svg>
+      </button>
+    </section>
+  </main>
+
+  <div class="zoom-modal" id="zoomModal" aria-hidden="true">
+    <button class="zoom-close" id="closeZoom" type="button" aria-label="Fermer l’image agrandie">×</button>
+    <img id="zoomImage" src="panels/panel-fr.png" alt="Panneau agrandi">
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
